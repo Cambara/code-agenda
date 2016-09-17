@@ -12,4 +12,7 @@
 */
 
 $app->get('/',['as' => 'agenda.index', 'uses' => 'AgendaController@index']);
+$app->get('/{name}',['as' => 'agenda.pesquisa', 'uses' => 'AgendaController@index']);
+$app->get('/pessoa/destroy/{id}',['as' => 'pessoa.destroy', 'uses' => 'PessoaController@destroy']);
+$app->get('/telefone/destroy/{id}',['as' => 'telefone.destroy', 'uses' => 'TelefoneController@destroy']);
 

@@ -10,14 +10,14 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">
                         <span>{{$pessoa->apelido}}</span>
-                        <span class="pull-right">
+                        <span class="pull-left contacts-icon-sexo">
                             @if($pessoa->sexo == 'M')
                                     <i class="fa fa-male"></i>
                                 @else
                                     <i class="fa fa-female"></i>
                                 @endif
                         </span>
-                        <span class="pull-right contacts-btn-actions">
+                        <span class="pull-right">
                             <a href="#" class="btn btn-xs btn-success" data-toggle="tooltip" data-placement="top"
                             title="Editar">
                                 <i class="fa fa-edit"></i>

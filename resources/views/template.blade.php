@@ -42,7 +42,7 @@
                 </div>
             </div>
             <hr/>
-            <div class="row">
+            <div class="row btn-row">
                 <div class="col-md-12">
                     @foreach($letras as $letra)
                         <a href="{{ route('agenda.pesquisa',["name" => $letra]) }}"
@@ -52,11 +52,11 @@
 
             </div>
         </header>
-        <div class="row btn-row">
+        <div class="row">
             @yield('container')
         </div>
     </div>
-
-<script src="/js/scripts.js"></script>
+<script type="text/javascript" src="/js/scripts.js"></script>
+@yield('scripts')
 </body>
 </html>

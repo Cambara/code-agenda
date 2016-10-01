@@ -78,7 +78,7 @@ $app->singleton(
 |
 */
 
-// $app->register(Agenda\Providers\AppServiceProvider::class);
+ $app->register(Agenda\Providers\AppServiceProvider::class);
 // $app->register(Agenda\Providers\AuthServiceProvider::class);
 // $app->register(Agenda\Providers\EventServiceProvider::class);
 

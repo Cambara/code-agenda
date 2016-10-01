@@ -14,16 +14,20 @@ class Pessoa extends Model
     {
         return $this->hasMany('Agenda\Telefone');
     }
-
+    public function emails()
+    {
+        return $this->hasMany('Agenda\Email');
+    }
     /**
      * @return array
      */
     public static function getLetras()
     {
-        return DB::select(DB::raw("SELECT DISTINCT value
+        $letras = DB::select(DB::raw("SELECT DISTINCT value
                                         FROM (
                                             SELECT DISTINCT LEFT(nome, 1) AS value FROM pessoas
                                             UNION SELECT DISTINCT LEFT(apelido, 1) AS value FROM pessoas
                                         ) AS letra"));
+        return array_map(function ($letra){return $letra->value;}, $letras);
     }
 }

@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Telefone extends Model
 {
-    protected $fillable = ['descricao','codpais','ddd','prefixo','sufixo'];
+    protected $fillable = ['descricao','codpais','ddd','prefixo','sufixo','pessoa_id'];
 
     public function pessoa(){
         return $this->belongsTo('Agenda\Pessoa');
